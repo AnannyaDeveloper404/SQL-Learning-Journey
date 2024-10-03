@@ -209,3 +209,77 @@
   ```sql
   ALTER TABLE `employees` RENAME COLUMN `surname` TO `lastName`;
   ```
+
+## SQL Aggregation, Grouping, and Aliases Cheat Sheet
+
+### Aggregation Functions
+
+- **COUNT()**  
+  Returns the number of rows matching the condition.
+  ```sql
+  SELECT COUNT(column_name) FROM table_name;
+  ```
+- **AVG()**
+  Returns the average value of a numeric column.
+
+```sql
+  SELECT AVG(column_name) FROM table_name;
+```
+
+- **SUM()**
+  Returns the total sum of a numeric column.
+
+```sql
+  SELECT SUM(column_name) FROM table_name;
+```
+
+- **MIN()**
+  Returns the smallest value in a column.
+
+```sql
+  SELECT MIN(column_name) FROM table_name;
+```
+
+- **MAX()**
+  Returns the largest value in a column.
+
+```sql
+  SELECT MAX(column_name) FROM table_name;
+```
+
+- **GROUP BY**
+  Used to group rows that have the same values into summary rows.
+
+```sql
+  SELECT column_name, COUNT(*)
+  FROM table_name
+  GROUP BY column_name;
+```
+
+- **HAVING**
+  Filter groups based on a condition
+
+```sql
+  SELECT column_name, COUNT(*)
+  FROM table_name
+  GROUP BY column_name
+  HAVING COUNT(*) > 5;
+
+```
+
+- **Aliases**
+  Use aliases to rename a column or table temporarily for better readability.
+
+```sql
+  SELECT column_name AS alias_name FROM table_name;
+
+```
+
+- **OFFSET**
+  OFFSET skips a specific number of rows before starting to return rows from the query. It is often used with the LIMIT clause.
+
+```sql
+  SELECT column_name
+  FROM table_name
+  LIMIT 10 OFFSET 5;
+```
