@@ -216,9 +216,11 @@
 
 - **COUNT()**  
   Returns the number of rows matching the condition.
-  ```sql
+
+```sql
   SELECT COUNT(column_name) FROM table_name;
-  ```
+```
+
 - **AVG()**
   Returns the average value of a numeric column.
 
